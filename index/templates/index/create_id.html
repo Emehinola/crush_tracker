@@ -1,0 +1,31 @@
+{% extends 'index/index.html' %}
+{% load static %}
+
+{% block content %}
+    <h4 class="how">Create User Id</h4>
+    <p>Note: The user Id is being genearated automatically by our system, so, you can't modify it.
+        You only need to create a password for Id for validity
+    </p>
+    <hr>
+
+    <form action="" method="POST">
+        <div class="form-group">
+            
+            <input type="text" disabled id="id" placeholder="User Id" class="form-control">
+            <label for="id">User Id</label>
+            
+            <input type="password" id="password" class="form-control">
+            <label for="password">Access password</label>
+            
+            <input type="password" id="comfirm-password" class="form-control">
+            <label for="id">Confirm password</label>
+            <p>Note: Your password can't be recovered once you forget it</p>
+
+            <button type="submit" class="btn mt-2">Create Id</button>
+        </div>
+    </form>
+    <div>
+        Already have an account?
+        <a href="{% url 'login' %}" class="btn" style="display: inline; color: red">Track Crushee</a>
+    </div>
+{% endblock content %}

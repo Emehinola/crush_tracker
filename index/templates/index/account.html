@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crush tracker</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'index/css/index.css' %}" />
+    <script type="text/javascript" src="{% static 'index/js/crush.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'index/css/bootstrap.css' %}" />
+    {% comment %}
+    <link rel="stylesheet" href="{% static 'index/css/bootstrap.min.css' %}" /> {% endcomment %}
+    <link type="text/css" rel="stylesheet" href="{% static 'index/css/font-awesome.min.css' %}" />
+
+    <style rel="stylesheet" type="text/css">
+        .btn {
+            background-color: transparent;
+            border-color: red;
+            display: flex;
+        }
+
+        @media only screen and (max-width:769px) {
+            .main-part {
+                background-color: transparent;
+                width: 450px;
+                box-shadow: 5px 5px 5px 5px rgb(185, 178, 178);
+            }
+
+            .how {
+                margin-top: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body
+    style="background-image: url('{% static 'index/images/bck.jpg' %}'); background-size: cover; background-attachment: fixed">
+    <div class="header">
+        <div class="container">Crush Tracker <span class="at">@</span> <span class="ease">ease</span></div>
+    </div>
+    <div class="container">
+        <div class="mt-5">
+            <div class="main-part" style="width: auto;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <h4 class="how">Crushee Records</h4>
+                        <table class="table table-dark">
+                            <thead>
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>DATE/TIME</th>
+                                    <th>ID</th>
+                                    <th>MESSAGE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>8:12PM. Jan 11, 2020</td>
+                                    <td>CT121</td>
+                                    <td>Hello dear i am crushing on you</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>8:12PM. Dec 12, 2020</td>
+                                    <td>CT121</td>
+                                    <td>I received your. Can you pls send me ur whatsapp contact so we can chat</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-6">
+                                <a class="btn" href="{% url 'home' %}">Send Another Request</a>
+                            </div>
+
+                            <div class="col-6">
+                                <a class="btn" href="#">Delete account</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <a onclick="getClick()" href="#" class="how">Sent Requests</a>
+                        <table class="table table-dark explanation">
+                            <thead>
+                                <th>S/N</th>
+                                <th>DATE/TIME</th>
+                                <th>CRUSH ID</th>
+                                <th>MESSAGE</th>
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
