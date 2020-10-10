@@ -3,9 +3,7 @@
 
 {% block content %}
     <h4 class="how">Create User Id</h4>
-    <p>Note: The user Id is being genearated automatically by our system, so, you can't modify it.
-        You only need to create a password for Id for validity
-    </p>
+    
     <hr>
 
     <form action="" method="POST">
@@ -20,8 +18,10 @@
             <input type="password" id="comfirm-password" class="form-control">
             <label for="id">Confirm password</label>
             <p>Note: Your password can't be recovered once you forget it</p>
-
             <button type="submit" class="btn mt-2">Create Id</button>
+            <p style="color: red">Note: <solid class="text-info"> The user Id is being genearated automatically by our system, so, you can't modify it.
+        You only need to create a password for Id for validity</solid>
+    </p>
         </div>
     </form>
     <div>

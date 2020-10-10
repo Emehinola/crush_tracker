@@ -80,7 +80,7 @@ label{
 @media only screen and (max-width:769px){
     .main-part{
         background-color: transparent;
-        width: 450px;
+        width: auto;
         box-shadow:5px 5px 5px 5px rgb(185, 178, 178);
     }
 
