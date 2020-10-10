@@ -2,25 +2,28 @@
 {% load static %}
 
 {% block content %}
-    <h4 class="how">User Login Page</h4><hr>
-    <div>
-        <form action="" method="POST">
-            <div class="form-group">
-                <input type="text" id="id" class="form-control" placeholder="Your accaount id here">
-                <label for="id">User Id</label>
-                <input type="password" id="password" class="form-control" placeholder="Your accaount password">
-                <label for="password">User password</label>
-                
-                <button class="btn mt-2" type="submit">Login</button>
-            </div>
-        </form>
-        <div>
-            <p>Are you New to <span>Crush Tracker</span>?. Create an Id</p> 
-            <a href="{% url 'create_id' %}" class="btn text-center" style="display: inline">Create Id</a>
-            <br><br>
-            <p>Back to homepage to send message to a crush</p> 
-            <a href="{% url 'home' %}" class="btn text-center" style="display: inline">Send message</a>
-            <br><br>
+<h4 class="how">User Login Page</h4>
+<hr>
+<div>
+    <form action="" method="POST">
+        <div class="form-group">
+            <label for="id">User Id</label>
+            <input style="background-color: rgb(245, 249, 250)" type="text" id="id" class="form-control"
+                placeholder="Your account id here">
+            <label for="password">User password</label>
+            <input style="background-color: rgb(245, 249, 250)" type="password" id="password" class="form-control"
+                placeholder="Your account password">
+
+            <button class="btn mt-2" type="submit">Login</button>
         </div>
+    </form>
+    <div>
+        <p>Are you New to <span>Crush Tracker</span>?. Create an Id</p>
+        <a href="{% url 'create_id' %}" class="btn text-center" style="display: inline">Create Id</a>
+        <br><br>
+        <p>Back to homepage to send message to a crush</p>
+        <a href="{% url 'home' %}" class="btn text-center" style="display: inline">Send message</a>
+        <br><br>
     </div>
+</div>
 {% endblock content %}

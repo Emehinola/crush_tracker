@@ -10,33 +10,43 @@
     <link type="text/css" rel="stylesheet" href="{% static 'index/css/index.css' %}" />
     <script type="text/javascript" src="{% static 'index/js/crush.js' %}"></script>
     <link rel="stylesheet" href="{% static 'index/css/bootstrap.css' %}" />
-    {% comment %} <link rel="stylesheet" href="{% static 'index/css/bootstrap.min.css' %}" /> {% endcomment %}
+    {% comment %}
+    <link rel="stylesheet" href="{% static 'index/css/bootstrap.min.css' %}" /> {% endcomment %}
     <link type="text/css" rel="stylesheet" href="{% static 'index/css/font-awesome.min.css' %}" />
 
     <style rel="stylesheet" type="text/css">
-        
-        .btn{
+        .btn {
             background-color: transparent;
             border-color: red;
             display: flex;
         }
-        @media only screen and (max-width:769px){
-            .main-part{
-                background-color: transparent;
-                margin-bottom: 20px;
-                box-shadow:5px 5px 5px 5px rgb(185, 178, 178);
-                width: auto;
+
+        input {
+            background-color: blueviolet;
         }
 
-            .how{
+        @media only screen and (max-width:769px) {
+            .main-part {
+                background-color: transparent;
+                margin-bottom: 20px;
+                box-shadow: 5px 5px 5px 5px rgb(185, 178, 178);
+                width: auto;
+            }
+
+            .how {
                 margin-top: 20px;
             }
-}
+
+            #explanation {
+                display: none;
+            }
+        }
     </style>
-    
+
 </head>
 
-<body style="background-image: url('{% static 'index/images/bck.jpg' %}'); background-size: cover; background-attachment: fixed">
+<body
+    style="background-image: url('{% static 'index/images/bck.jpg' %}'); background-size: cover; background-attachment: fixed">
     <div class="header">
         <div class="container">Crush Tracker <span class="at">@</span> <span class="ease">ease</span></div>
     </div>
@@ -46,72 +56,81 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                         {% block content %}
-                            {% comment %} other templates go in here {% endcomment %}
+                        {% comment %} other templates go in here {% endcomment %}
                         {% endblock content %}
                     </div>
                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                        <a onclick="getClick()" href="#" class="how">How it works</a><hr>
+                        <a onclick="getClick()" href="#" class="how">How it works</a>
+                        <hr>
                         <div id="explanation">
                             <ul class="list">
                                 <li class="list-item">Fill in the form correctly with the valid info</li>
-                                <li class="list-item">Press the <span style="color: red;">submit</span> button after filling the form to submit your request </li>
-                                <li class="list-item">Your crush will receive your proposal with your message. Only your Id will be shown</li>
-                                <li class="list-item">You can include your <span style="color: red;">id</span> in your <span style="color: red;">WhatsApp</span>
-                                    or <span style="color: red;">Facebook</span> bio so that your crush can track you with your Id if he/she is intersted in knowing you
+                                <li class="list-item">Press the <span style="color: red;">submit</span> button after
+                                    filling the form to submit your request </li>
+                                <li class="list-item">Your crush will receive your proposal with your message. Only your
+                                    Id will be shown</li>
+                                <li class="list-item">You can include your <span style="color: red;">id</span> in your
+                                    <span style="color: red;">WhatsApp</span>
+                                    or <span style="color: red;">Facebook</span> bio so that your crush can track you
+                                    with your Id if he/she is intersted in knowing you
                                 </li>
-                                <li class="list-item">Check your account regularly by clicking on <span style="color: red;">Track crushee</span> to view those who are crushing on you</li>
-                                <li style="list-style-type: none;"><span class="text-info" style="text-decoration: underline;">Note</span></li>
-                                <li class="list-item">It's necessary you describe your self well and include your contact if possible so that your crush can get you easily</li>
+                                <li class="list-item">Check your account regularly by clicking on <span
+                                        style="color: red;">Track crushee</span> to view those who are crushing on you
+                                </li>
+                                <li style="list-style-type: none;"><span class="text-info"
+                                        style="text-decoration: underline;">Note</span></li>
+                                <li class="list-item">It's necessary you describe your self well and include your
+                                    contact if possible so that your crush can get you easily</li>
 
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
     <script type="text/javascript">
         // function for animating the hearts-love in the home page
-var counter = 0;
+        var counter = 0;
 
-function animate() {
-    var heart_one = document.getElementById('heart-one');
-    var heart_two = document.getElementById('heart-two');
-    var hear_three = document.getElementById('heart-three');
+        function animate() {
+            var heart_one = document.getElementById('heart-one');
+            var heart_two = document.getElementById('heart-two');
+            var hear_three = document.getElementById('heart-three');
 
-    if (counter == 0) {
-        heart_one.style.color = 'white';
-        heart_two.style.color = 'red';
-        hear_three.style.color = 'red';
-    }
-    else if (counter == 1) {
-        heart_two.style.color = 'white';
-        heart_one.style.color = 'red';
-        hear_three.style.color = 'red';
-    }
-    else {
-        hear_three.style.color = 'white';
-        heart_two.style.color = 'red';
-        heart_one.style.color = 'red';
-    }
+            if (counter == 0) {
+                heart_one.style.color = 'white';
+                heart_two.style.color = 'red';
+                hear_three.style.color = 'red';
+            }
+            else if (counter == 1) {
+                heart_two.style.color = 'white';
+                heart_one.style.color = 'red';
+                hear_three.style.color = 'red';
+            }
+            else {
+                hear_three.style.color = 'white';
+                heart_two.style.color = 'red';
+                heart_one.style.color = 'red';
+            }
 
-    {% comment %} console.log(heart_one.style.color); {% endcomment %}
-    
-    if (counter == 2) {
-        counter = 0;
-    }
-    else {
-        counter++;
-    }
-    
-}
+            {% comment %} console.log(heart_one.style.color); {% endcomment %}
 
-setInterval(() => {
-    animate();
-}, 1000);
+            if (counter == 2) {
+                counter = 0;
+            }
+            else {
+                counter++;
+            }
+
+        }
+
+        setInterval(() => {
+            animate();
+        }, 1000);
     </script>
-    
+
 </body>
 
 </html>
